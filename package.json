@@ -1,0 +1,16 @@
+{
+  "name": "talk-codemods",
+  "version": "1.0.0",
+  "description": "Slides for codemods talk",
+  "main": "index.js",
+  "repository": "git@github.com:tkers/talk-codemods.git",
+  "author": "Tijn Kersjes <tijn@divbyzero.nl>",
+  "scripts": {
+    "build": "cleaver slides.md --output index.html",
+    "watch": "cleaver watch slides.md --output index.html"
+  },
+  "private": true,
+  "dependencies": {
+    "cleaver": "^0.8.7"
+  }
+}
