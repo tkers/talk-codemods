@@ -156,10 +156,10 @@ Tools using the AST:
 
 --
 
-### Basic transformer
+### Basic transformation
 
 ```js
-export default function transformer(file, api) {
+export default function transform(file, api) {
   const j = api.jscodeshift
   const root = j(file.source)
 
@@ -198,10 +198,10 @@ class MyComponent extends React.Component {
 
 --
 
-### State-to-class-property transformer
+### State-to-class-property transform
 
 ```js
-export default function transformer(file, api) {
+export default function transform(file, api) {
   const j = api.jscodeshift
   const root = j(file.source)
 
@@ -232,7 +232,7 @@ export default function transformer(file, api) {
 
 --
 
-### Resulting transformation 🙌
+### Resulting code 🙌
 
 *Almost* what we wanted:
 
@@ -248,7 +248,7 @@ class MyComponent extends React.Component {
 
 --
 
-### More transformers!
+### More transformations!
 
 - Remove empty constructor
 - Compose with other transforms
