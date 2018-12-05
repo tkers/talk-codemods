@@ -731,6 +731,23 @@ hue-6-2: #e6c07b
 </section>
   </div>
   <div class="slide hidden" id="slide-2">
+    <section class="slide-content"><h3 id="-tijn-kersjes">🙋‍♂️ Tijn Kersjes</h3>
+<ul>
+<li>Software engineer at <strong>Reaktor</strong> Amsterdam</li>
+</ul>
+<center>
+  <img src="reaktor.png" style="padding: 0; width: auto; display: inline;" />
+</center>
+
+
+<ul>
+<li>Writing Node.js, React &amp; TypeScript by day</li>
+<li>Tinkering with compilers by night</li>
+<li><a href="https://github.com/tkers">github.com/<strong>tkers</strong></a></li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-3">
     <section class="slide-content"><h3 id="what-are-codemods-">What are codemods?</h3>
 <ul>
 <li>Also called program <strong>transformations</strong></li>
@@ -743,7 +760,7 @@ hue-6-2: #e6c07b
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-3">
+  <div class="slide hidden" id="slide-4">
     <section class="slide-content"><h3 id="basic-code-refactoring">Basic code refactoring</h3>
 <p>Function name is updated:</p>
 <pre><code class="lang-diff">export {
@@ -764,7 +781,7 @@ hue-6-2: #e6c07b
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-4">
+  <div class="slide hidden" id="slide-5">
     <section class="slide-content"><h3 id="however-">However...</h3>
 <p>No access to the <strong>semantics</strong> of your code:</p>
 <pre><code class="lang-js"><span class="hljs-keyword">import</span> { foo <span class="hljs-keyword">as</span> fooA } <span class="hljs-keyword">from</span> <span class="hljs-string">'./myLib.js'</span>
@@ -776,7 +793,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-5">
+  <div class="slide hidden" id="slide-6">
     <section class="slide-content"><h3 id="changing-code-structure">Changing code structure</h3>
 <p>Binding manually:</p>
 <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -797,7 +814,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 <p>Modify the <strong>program</strong> instead of <strong>text</strong>!</p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-6">
+  <div class="slide hidden" id="slide-7">
     <section class="slide-content"><h3 id="abstract-syntax-tree-">Abstract Syntax Tree 🌲</h3>
 <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">constructor</span>() {
@@ -828,12 +845,12 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-7">
+  <div class="slide hidden" id="slide-8">
     <section class="slide-content"><h3 id="ast-explorer">AST Explorer</h3>
 <p><a href="https://astexplorer.net">astexplorer.net</a></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-8">
+  <div class="slide hidden" id="slide-9">
     <section class="slide-content"><h3 id="now-what-">Now what? 🤔</h3>
 <p>Tools using the AST:</p>
 <ul>
@@ -844,7 +861,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-9">
+  <div class="slide hidden" id="slide-10">
     <section class="slide-content"><h3 id="jscodeshift">JSCodeshift</h3>
 <ul>
 <li>AST transformation tool</li>
@@ -856,7 +873,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-10">
+  <div class="slide hidden" id="slide-11">
     <section class="slide-content"><h3 id="basic-transformer">Basic transformer</h3>
 <pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transformer</span>(<span class="hljs-params">file, api</span>) </span>{
   <span class="hljs-keyword">const</span> j = api.jscodeshift
@@ -869,7 +886,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-11">
+  <div class="slide hidden" id="slide-12">
     <section class="slide-content"><p>State assignment in constructor:</p>
 <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">constructor</span>() {
@@ -890,7 +907,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-12">
+  <div class="slide hidden" id="slide-13">
     <section class="slide-content"><h3 id="state-to-class-property-transformer">State-to-class-property transformer</h3>
 <pre><code class="lang-js"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">transformer</span>(<span class="hljs-params">file, api</span>) </span>{
   <span class="hljs-keyword">const</span> j = api.jscodeshift
@@ -922,7 +939,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-13">
+  <div class="slide hidden" id="slide-14">
     <section class="slide-content"><h3 id="resulting-transformation-">Resulting transformation 🙌</h3>
 <p><em>Almost</em> what we wanted:</p>
 <pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
@@ -935,7 +952,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-14">
+  <div class="slide hidden" id="slide-15">
     <section class="slide-content"><h3 id="more-transformers-">More transformers!</h3>
 <ul>
 <li>Remove empty constructor</li>
@@ -944,7 +961,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-15">
+  <div class="slide hidden" id="slide-16">
     <section class="slide-content"><h3 id="apply-it-to-the-repo-">Apply it to the repo 🤞</h3>
 <ul>
 <li>100 KLOC</li>
@@ -954,7 +971,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 <p><img src="commit.png" alt="commit info"></p>
 </section>
   </div>
-  <div class="slide hidden" id="slide-16">
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="some-important-painpoints">Some important painpoints</h3>
 <ul>
 <li>Documentation is scarce</li>
@@ -967,7 +984,7 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="super-fast-refactoring-">Super fast refactoring 🚀</h3>
 <ul>
 <li>Breaking API</li>
@@ -976,13 +993,16 @@ sendMessage(<span class="hljs-string">'foo'</span>)
 </ul>
 </section>
   </div>
-  <div class="slide hidden  dark" id="slide-18">
+  <div class="slide hidden  dark" id="slide-19">
     <section class="slide-content"><h1 id="that-s-it-for-today-">That&#39;s it for today 👌</h1>
 <ul>
 <li><a href="https://astexplorer.net">astexplorer.net</a></li>
 <li><a href="https://github.com/facebook/jscodeshift">facebook/jscodeshift</a></li>
 <li><a href="https://github.com/reactjs/react-codemod">reactjs/react-codemod</a></li>
 <li><a href="https://github.com/cpojer/js-codemod">cpojer/js-codemod</a></li>
+</ul>
+<ul>
+<li><strong><a href="https://reaktor.com/careers">reaktor.com/careers</a></strong></li>
 </ul>
 <p><img src="bg.jpg" alt="background"></p>
 </section>

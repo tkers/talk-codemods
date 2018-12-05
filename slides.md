@@ -13,6 +13,21 @@ theme: tkers/cleaver-theme-sunset
 
 --
 
+### 🙋‍♂️ Tijn Kersjes
+
+- Software engineer at **Reaktor** Amsterdam
+
+<center>
+  <img src="reaktor.png" style="padding: 0; width: auto; display: inline;" />
+</center>
+
+
+- Writing Node.js, React & TypeScript by day
+- Tinkering with compilers by night
+- [github.com/**tkers**](https://github.com/tkers)
+
+--
+
 ### What are codemods?
 
 - Also called program **transformations**
@@ -274,5 +289,8 @@ class MyComponent extends React.Component {
 - [facebook/jscodeshift](https://github.com/facebook/jscodeshift)
 - [reactjs/react-codemod](https://github.com/reactjs/react-codemod)
 - [cpojer/js-codemod](https://github.com/cpojer/js-codemod)
+
+
+- **[reaktor.com/careers](https://reaktor.com/careers)**
 
 ![background](bg.jpg)
