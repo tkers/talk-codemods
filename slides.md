@@ -171,6 +171,15 @@ export default function transform(file, api) {
 
 --
 
+### Our codebase
+
+- 100 KLOC
+- 50 developers
+- 20 merges/day
+- A lot of time pressure 💩
+
+--
+
 State assignment in constructor:
 
 ```js
@@ -258,7 +267,6 @@ class MyComponent extends React.Component {
 
 ### Apply it to the repo 🤞
 
-- 100 KLOC
 - Manual `git diff` check
 - Automated tests
 
@@ -278,9 +286,9 @@ class MyComponent extends React.Component {
 
 ### Super fast refactoring 🚀
 
-- Breaking API
-- Postpone design decisions
 - Wow-factor
+- Updating function interfaces
+- Postpone design decisions
 
 -- dark
 
